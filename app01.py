@@ -267,7 +267,7 @@ def process_deal_status_folder(folder):
                             break
 
             if not authorized:
-                reason = f"Unauthorized | Account Manager: {acct_mgr}"
+                reason = "Unauthorized access for requested deal"
                 print(f"⛔ Sender '{sender_name}' not authorized (AM: {acct_mgr})")
                 log_event(sender_email, carrier, "DENIED", reason, file_path)
                 if is_airtel_sender(sender_email):
